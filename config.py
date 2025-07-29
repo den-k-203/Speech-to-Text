@@ -3,4 +3,4 @@ import os
 
 load_dotenv()
 
-token_huggingface = os.getenv("TOKEN_HUGGINGFACE")
+LOCAL_PATH_TO_MODEL = os.getenv("LOCAL_PATH_TO_MODEL")

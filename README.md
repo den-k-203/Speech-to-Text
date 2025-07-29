@@ -38,11 +38,20 @@ pip uninstall torch torchaudio torchvision -y
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
 ---
-## 📄 Конфігурація
-У файл `.env` додайте ваш токен HuggingFace:
+## 📁 Завантаження моделі локально (офлайн)
+Щоб працювати без інтернету та токена Hugging Face, попередньо завантажте модель:
 ```bash
-#TOKEN HUGGINGFACE
-TOKEN_HUGGINGFACE=<"TOKEN_HUGGINGFACE">
+git lfs install
+git clone https://huggingface.co/pyannote/speaker-diarization path/to/saving
+```
+У `.env` вкажіть змінну LOCAL_PATH_TO_MODEL, як описано нище. Модель буде використана напряму з диску.
+
+---
+## 📄 Конфігурація
+У файл `.env` додайте ваш шлях до `config.yml` speaker-diarization:
+```bash
+# Працюєте повністю локально:
+LOCAL_PATH_TO_MODEL=<'LOCAL_PATH_TO_MODEL'>
 ```
 ---
 ## 🚀 Запуск
