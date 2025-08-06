@@ -2,7 +2,7 @@ from service.diarization_service import process_audio_segments
 from service.spleeter_service import extract_vocals
 
 
-path='audio/news_tsn.mp3'
+path='audio/interview.mp3'
 output_dir_path = 'audio/vocal'
 
 if __name__ == '__main__':
